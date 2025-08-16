@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Price Prediction</title>
+    </head>
+    <body>
+        <h2>Price Prediction</h2>
+        <form method="POST" action="/predict">
+            <label>City:</label>
+            <select name="City">
+            <option value="Bengaluru"></option>
+            <option value="Mumbai"></option>
+            <option value="Goa"></option>
+            <option value="Delhi"></option>
+            </select><br><br>
+            <label>Room Type</label>
+            <select name="Room Type">
+                <option value="Entire Room">Entire Room</option>
+                <option value="Private Room">Private Room</option>
+                <option value="Shared Room">Shared Room</option>
+            </select><br><br>
+            <label>Bedrooms</label>
+            <input type="number" name="Bedrooms" min="1" max="5" requried><br>
+            <label>Bathrooms:</label>
+            <input type="number" name="Bedrooms" min="1" max="5" requried><br>
+            <label>Guest Capacity</label>
+
+            <label>Has Wifi</label>
+
+            <label>Has AC</label>
+
+            <label>Distance From City Center(km)</label>
+
+            <button type="Submit"></button>
+        </form>
+        {% if Prediction_text %}
+        <h3>{{Prediction_text}}</h3>
+        {% endif %}
+    </body>
+</html>
